@@ -1,7 +1,6 @@
 // Dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
-const style = require("./templates/css")
 
 // Construct Requirements
 const Member = require("./lib/member")
@@ -203,7 +202,7 @@ function compileTeam() {
     `
     htmlArray.push(htmlEnd);
 
-    fs.writeFile(`./html-storage/${finalTeamArray[0]}.html`, htmlArray.join(""), function (err) {
+    fs.writeFile(`./output/${finalTeamArray[0]}.html`, htmlArray.join(""), function (err) {
         
     })
 }
