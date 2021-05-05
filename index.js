@@ -40,8 +40,8 @@ function addManager() {
 
         {
             type: "number",
-            message: "What is your team manager's office number?",
-            name: "officeNumber"
+            message: "What is your team manager's ID number?",
+            name: "IDNumber"
         },
     ])
 
@@ -49,8 +49,8 @@ function addManager() {
             const name = data.name
             const id = 1
             const email = data.email
-            const officeNumber = data.officeNumber
-            const staff = new Manager(name, id, email, officeNumber)
+            const IDNumber = data.IDNumber
+            const staff = new Manager(name, id, email, IDNumber)
             finalTeamArray.push(staff)
             addstaffs();
         });
@@ -141,10 +141,11 @@ function addIntern() {
 };
 
 function compileTeam() {
-    console.log("Congratulations!")
+    console.log("Your Team is Now Created!")
 
     const htmlArray = []
     const htmlBeginning = `
+
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -179,7 +180,8 @@ function compileTeam() {
         text-align: center;
     }
     
-    h1 {
+    h1,
+    h2 {
         font-family: 'Times New Roman', Times, serif;
         font-style: bold;
         font-size: 72px;
@@ -243,9 +245,9 @@ for (let i = 1; i < finalTeamArray.length; i++) {
             <p>Staff ID: ${finalTeamArray[i].id}</p>
             <p>Email: <a href="mailto:${finalTeamArray[i].email}">${finalTeamArray[i].email}</a>></p>
         `
-    if (finalTeamArray[i].officeNumber) {
+    if (finalTeamArray[i].IDNumber) {
             object += `
-            <p>${finalTeamArray[i].officeNumber}</p>
+            <p>${finalTeamArray[i].IDNumber}</p>
             `
         }
     if (finalTeamArray[i].github) {
