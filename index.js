@@ -62,7 +62,7 @@ function addstaffs() {
         {
             type: "list",
             message: "Would you like to add more staff?",
-            choices: ["Yes, add engineer", "Yes, add intern", "No, my team is complete"],
+            choices: ["Yes, please add an engineer", "Yes, please add an intern", "No, my team is complete"],
             name: "addstaffData"
         }
     ])
@@ -70,11 +70,11 @@ function addstaffs() {
         .then(function (data) {
 
             switch (data.addstaffData) {
-                case "Yes, add an engineer":
+                case "Yes, please add an engineer":
                     addEngineer();
                     break;
 
-                case "Yes, add an intern":
+                case "Yes, please add an intern":
                     addIntern();
                     break;
                 case "No, my team is complete":
@@ -157,33 +157,62 @@ function compileTeam() {
     
     <title>Document</title>
     
-    <style>
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    margin-top: 25px;
-    margin-bottom: 25px;
+<style>
+    body {
+        background-color: grey;
     }
-.card {
-    padding: 15px;
-    border-radius: 6px;
-    background-color: white;
-    color: grey;
-    margin: 15px;
+    
+    .banner-bar {
+        border-color: blue;
+        border-style: groove;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 45%;
+        font-style: bold;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
     }
-.text {
-    padding: 15px;
-    border-radius: 6px;
-    background-color: grey;
-    color: black;
-    margin: 15px;
+    
+    .card-container {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: bold;
+        text-align: center;
     }
-.col {
-    flex: 1;
-    text-align: center;
+    
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: bold;
+        font-size: 72px;
+        border-bottom: 35px;
     }
+    
+    h3 {
+        border-right: 10px;
+        border-left: 10px;
+        border-color: rgb(67, 97, 197);
+        border-style: solid;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 60px;
+        font-style: bold;
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 35px;
+    }
+    
+    .card-bottom {
+        border-right: 10px;
+        border-left: 10px;
+        border-color: white;
+        border-style: solid;
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-bottom: 35px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 35px;
+    }
+    
 </style>
+
 </head>
 
 <body>
@@ -202,29 +231,29 @@ function compileTeam() {
     </div>
     <div class="card-container">
     `
-    htmlArray.push(htmlBeginning);
+htmlArray.push(htmlBeginning);
 
-    for (let i = 1; i < finalTeamArray.length; i++) {
-        let object = `
-        <div class="staff-card">
-            <div class="card-top">
-                <h3>${finalTeamArray[i].name}</h3>
-            </div>
-            <div class="card-bottom">
-                <p>Staff ID: ${finalTeamArray[i].id}</p>
-                <p>Email: <a href="mailto:${finalTeamArray[i].email}">${finalTeamArray[i].email}</a>></p>
+for (let i = 1; i < finalTeamArray.length; i++) {
+    let object = `
+    <div class="staff-card">
+        <div class="card-top">
+            <h3>${finalTeamArray[i].name}</h3>
+        </div>
+        <div class="card-bottom">
+            <p>Staff ID: ${finalTeamArray[i].id}</p>
+            <p>Email: <a href="mailto:${finalTeamArray[i].email}">${finalTeamArray[i].email}</a>></p>
         `
-        if (finalTeamArray[i].officeNumber) {
+    if (finalTeamArray[i].officeNumber) {
             object += `
             <p>${finalTeamArray[i].officeNumber}</p>
             `
         }
-        if (finalTeamArray[i].github) {
+    if (finalTeamArray[i].github) {
             object += `
             <p>GitHub: <a href="https://github.com/${finalTeamArray[i].github}">${finalTeamArray[i].github}</a></p>
             `
         }
-        if (finalTeamArray[i].school) {
+    if (finalTeamArray[i].school) {
             object += `
             <p>School: ${finalTeamArray[i].school}</p>
             `
