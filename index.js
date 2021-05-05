@@ -246,18 +246,18 @@ for (let i = 1; i < finalTeamArray.length; i++) {
             <p>Email: <a href="mailto:${finalTeamArray[i].email}">${finalTeamArray[i].email}</a>></p>
         `
     if (finalTeamArray[i].IDNumber) {
-            object += `
-            <p>${finalTeamArray[i].IDNumber}</p>
+        object += `
+        <p>${finalTeamArray[i].IDNumber}</p>
             `
         }
     if (finalTeamArray[i].github) {
-            object += `
-            <p>GitHub: <a href="https://github.com/${finalTeamArray[i].github}">${finalTeamArray[i].github}</a></p>
+        object += `
+        <p>GitHub: <a href="https://github.com/${finalTeamArray[i].github}">${finalTeamArray[i].github}</a></p>
             `
         }
     if (finalTeamArray[i].school) {
-            object += `
-            <p>School: ${finalTeamArray[i].school}</p>
+        object += `
+        <p>School: ${finalTeamArray[i].school}</p>
             `
         }
         object += `
