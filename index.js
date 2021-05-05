@@ -160,7 +160,7 @@ function compileTeam() {
     
 <style>
     body {
-        background-color: grey;
+        background-color: silver;
     }
     
     .banner-bar {
