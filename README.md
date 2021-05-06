@@ -8,6 +8,13 @@ The resubmission contains a reworking of vital aspects of code. A reworking of j
 
 To run the node application simply enter:
 - node index.js
+
+To run the test suites:
+- npm install jest
+- enter 'jest' by itself in the command prompt
+
+## Video Submission
+
 Provided is a video link to the application in question:
 
 [Video Example](https://drive.google.com/file/d/15e5tWBfS4fBk0cTrpSA_KVMOchK4Cocm/view)
