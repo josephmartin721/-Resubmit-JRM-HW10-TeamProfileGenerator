@@ -3,10 +3,10 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // Construct Requirements
-const staff = require("./lib/staff")
 const Engineer = require("./lib/engineer")
-const Manager = require("./lib/manager")
 const Intern = require("./lib/intern")
+const Manager = require("./lib/manager")
+const Staff = require("./lib/staff")
 
 let finalTeamArray = [];
 
@@ -37,7 +37,6 @@ function addManager() {
             message: "What is your team manager's email address?",
             name: "email"
         },
-
         {
             type: "number",
             message: "What is your team manager's ID number?",
@@ -62,7 +61,9 @@ function addstaffs() {
         {
             type: "list",
             message: "Would you like to add more staff?",
-            choices: ["Yes, please add an engineer", "Yes, please add an intern", "No, my team is complete"],
+            choices: ["Yes, please add an engineer", 
+            "Yes, please add an intern", 
+            "No, my team is complete"],
             name: "addstaffData"
         }
     ])
