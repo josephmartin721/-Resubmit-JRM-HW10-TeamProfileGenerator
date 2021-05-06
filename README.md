@@ -10,4 +10,6 @@ To run the node application simply enter:
 - node index.js
 Provided is a video link to the application in question:
 
-[Video Link] ()
+[Video Example](https://drive.google.com/file/d/15e5tWBfS4fBk0cTrpSA_KVMOchK4Cocm/view)
+
+[Generated HTML Page](https://drive.google.com/file/d/1cJ3bAR9_CT0HGCQV3wBnAn0esricJADn/view)
